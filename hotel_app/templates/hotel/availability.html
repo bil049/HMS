@@ -1,0 +1,80 @@
+{% extends 'hotel/base1.html' %}
+{% block content %}
+<style>
+    body {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+    h1 {
+        color: rgb(215, 210, 210);
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Available Rooms</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table" style="background-color: rgba(237, 238, 234, 0.8)">
+                <thead>
+                    <tr>
+                        <th>Room Number</th>
+                        <th>Room Type</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for room in available_rooms %}
+                    <tr>
+                        <td>{{ room.room_number }}</td>
+                        <td>{{ room.room_type }}</td>
+                        <td>
+                            <form action="{% url 'reserve1' %}" method="POST">
+                                {% csrf_token %}
+                                <input type="hidden" name="room_number" value="{{ room.room_number }}">
+                                <button type="submit" class="btn btn-success">Reserve</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Unavailable Rooms</h1>
+        </div>
+    </div>
+
+    <!-- Reservation Table -->
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table" style="background-color: rgba(237, 238, 234, 0.8)">
+                <thead>
+                    <tr>
+                        <th>Room Number</th>
+                        <th>Room Type</th>
+                        <th>Available By</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for reservation in reserved_rooms %}
+                    <tr>
+                        <td>{{ reservation.room_number }}</td>
+                        <td>{{ reservation.room_type }}</td>
+                        <td>{{ reservation.check_out }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

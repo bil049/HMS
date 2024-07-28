@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Form</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+  </head>
+  
+  <body>
+    <div class="logo">
+        <img src="{% static 'images/img/logo.png' %}" >
+    </div>
+    <div class="container">
+      <form method="POST" action="">
+        <h2>ADMIN LOGIN</h2>
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" name="username"><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password"><br>
+
+        {% if messages %}
+        {% for message in messages %}
+        <p>{{ message }}</p>
+        {% endfor %}
+        {% endif %}
+
+        <input type="submit" value="Login" class="btn">
+      </form>
+    </div>
+  </body>
+</html>

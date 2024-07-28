@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    
+      
+  </head>
+  
+  <body>
+    <div class ="logo">
+        <img src="{% static 'images/img/logo.png' %}" >
+</div>
+    <div class="container">
+        
+      <form action=""  method="POST">
+        {% csrf_token %}
+        <h2>REGISTER USER</h2>
+
+        <p><label for="username">Username</label></p>
+        <p>{{form.username}}</p>
+
+        <p><label for="first_name">First Name</label></p>
+        <p>{{form.first_name}}</p>
+
+        <p><label for="last_name">Last Name</label></p>
+        <p>{{form.last_name}}</p>
+
+        <p><label for="email">Email Address</label></p>
+        <p>{{form.email}}</p>
+
+        <p><label for="password1">Enter Password</label></p>
+        <p>{{form.password1}}</p>
+        <center><p style="font-size:10.5px"><i>Password must be at least 8 characters long</i></p></center>
+       
+        <center><i style="font-size:10.5px">Password can't be too similar to first name</i></center>
+        <p><label for="password2">Confirm Password</label></p>
+        <p>{{form.password2}}</p>
+      <input type="submit" value ="Register" class="btn">
+      {{form.errors}}
+    </form>
+    </div>
+  </body>
+</html>

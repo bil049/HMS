@@ -1,0 +1,38 @@
+nav{
+    height: 75px;
+}
+.container-fluid{
+    height:75px;
+    background-color: rgb(231, 227, 227);
+}
+hr{
+    margin-top: auto;
+    height: 4px;
+    color:rgb(115, 112, 112)
+}
+body{
+    background-color: rgb(247, 243, 243);
+}
+.logo img{
+    height: 75px;
+    width: 75px;
+}
+.btn{
+	color:rgb(231, 227, 227);
+    border: 2px solid rgb(139, 136, 136);
+	margin-top: 15px;
+	margin-left: 120px;
+	width: 100px;
+	height: 45px;
+	text-align: center;
+	line-height: 20px;
+	cursor: pointer;
+    background: rgb(171, 164, 144);
+    border-radius: 17px;
+
+}
+.btn:hover{
+	background: rgb(201, 200, 195);
+	color: #fff;
+    border: 2px solid rgb(124, 122, 122);
+}

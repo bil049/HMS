@@ -1,0 +1,51 @@
+{% extends 'hotel/base1.html' %}
+{%block content%}
+<style>
+    .container{
+        width: auto;
+        height: 750px;
+    }
+    .row{
+        height: 375px;
+    }
+    .col{
+        width:75px;
+        height: 355px;
+        background: rgba(231, 227, 227, 0.882);
+        border: 2px solid rgb(231, 227, 227);
+        border-radius: 15px;
+        margin-bottom: 15px;
+    }
+    .col:hover{
+        background: rgba(231, 227, 227, 0.95);
+        color: #fff;
+        border: 2px solid rgb(124, 122, 122);
+        transform: translateY(10px);
+        transition: transform 0.5s;
+    }
+    h2{
+        color: black;
+        margin-top: 150px;
+        margin-left: 30px;
+    }
+    body{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+    </style>
+    <title>Reservations</title>
+ <div class="container">
+    <a href="../bookservice" style="text-decoration: none"><div class="row">
+        <div class="col">
+            <h2>Pick-up/Drop-off</h2>
+        </div>
+    </div> </a>
+    <a href="../bookedservices" style="text-decoration: none"><div class="row">
+        <div class="col">
+            <h2>View Booked Services</h2>
+        </div>
+    </div></a>
+</div>
+{% endblock %}

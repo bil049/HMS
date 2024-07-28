@@ -1,0 +1,38 @@
+{% extends 'hoteladmin/base1.html'%}
+{% block content%}
+<style>
+    body{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+    h1{
+        color: rgb(215, 210, 210);
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Messages</h1>
+        </div>
+    </div>
+    <div class="row" style="background-color: rgba(237, 238, 234, 0.8); border-radius:8px">
+        <div class="col-md-12">
+     {% for message in messages %}
+       
+  <div>
+    <h4>{{ message.subject }}</h4>
+    <p>From: {{ message.sender }}</p>
+    <p>{{ message.content }}</p>
+    <p>Sent at: {{ message.timestamp }}</p>
+  </div>
+ <hr style="color: black; height: 3px">
+{% empty %}
+  <p>No messages.</p>
+
+
+        </div>
+    </div> <br><br>{% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'hoteladmin/base1.html'%}
+{% block content%}
+<style>
+    body{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+    h1{
+        color: rgb(215, 210, 210);
+    }
+    .btn{
+        color:rgb(231, 227, 227);
+        border: 2px solid rgb(139, 136, 136);
+        width: 100px;
+        height: 30px;
+        text-align: center;
+        line-height: 20px;
+        cursor: pointer;
+        background: rgb(171, 164, 144);
+        border-radius: 8px;
+    }
+    .btn:hover{
+        background: rgb(201, 200, 195);
+        color: #fff;
+        border: 2px solid rgb(124, 122, 122);
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Cancel Rooms</h1>
+        </div>
+    </div>
+
+    <!-- Room Table -->
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table" style="background-color: rgba(237, 238, 234, 0.8)">                    
+                <thead>
+                    <tr>
+                        
+                        <th>Room Number</th>
+                        <th>Room Type</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for Room in Rooms%}
+                    <tr>
+                        
+                        <td>{{Room.room_number}}</td>
+                        <td>{{Room.room_type}}</td>
+                        
+                        <td><a href="{% url 'delete_room' Room.pk%}" ><button type ="button" class="btn">Cancel</button></a></td>
+
+                    </tr>
+                    {%endfor%}
+
+                </tbody>
+            </table>
+                    
+        </div>
+    </div>
+</div>
+{% endblock %}

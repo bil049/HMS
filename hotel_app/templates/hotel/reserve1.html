@@ -1,0 +1,32 @@
+{% extends 'hotel/base2.html' %}
+{% block content %}
+
+  <title>Reservation</title>
+<div class="container">
+    <form action="" method="POST">
+        <h2>RESERVATION</h2>
+
+        {% csrf_token %}
+        <p><label for="user">User:</label></p>
+        <p>{{form.user}}</p>
+
+
+        <p><label for="name">Name:</label></p>
+        <p>{{form.name}}</p>
+
+        <p><label for="room_number">Room Number:</label></p>
+        <p><input type="number"  name="room_number"></p>
+
+        <p><label for="name">Room Type:</label></p>
+        <p>{{form.room_type}}</p>
+
+        <p><label for="check_in">Check-In Date:</label></p>
+        <p><input type="date"  name="check_in"></p>
+        
+        <p><label for="check_out">Check-Out Date:</label></p>
+        <p><input type="date"  name="check_out"></p>
+
+        <input type="submit" value ="Reserve" class="btn btn-success"> 
+    </form>
+</div>
+{% endblock %}

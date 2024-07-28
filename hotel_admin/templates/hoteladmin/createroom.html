@@ -1,0 +1,21 @@
+{% extends 'hoteladmin/base2.html' %}
+{% block content %}
+
+  <title>Reservation</title>
+<div class="container">
+    <form action="" method="POST">
+        <h2>ROOM</h2>
+
+        {% csrf_token %}
+        
+        <p><label for="room_number">Room Number:</label></p>
+        <p><input type="number"  name="room_number"></p>
+
+        <p><label for="name">Room Type:</label></p>
+        <p>{{form.room_type}}</p>
+
+
+        <input type="submit" value ="Add Room" class="btn btn-success"> 
+    </form>
+</div>
+{% endblock %}

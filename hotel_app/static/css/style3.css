@@ -1,0 +1,86 @@
+.container{
+    margin-top: 15px;
+    align-content: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    }
+    body {
+    background-color: rgb(247, 243, 243);
+    }
+    
+    form {
+        margin-top: 100px;
+    background-color: rgb(231, 227, 227);
+    border: 2px solid rgb(124, 122, 122);
+    padding: 20px;
+    border-radius: 25px;
+    width: 350px;
+    align-content: center;
+    }
+    
+    label {
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(83, 78, 60);
+    font-size: 17px;
+    }
+    
+    input{
+        background-color: rgb(247, 243, 243);
+        border-radius: 5px;
+        border: 1px solid rgb(247, 243, 243);
+        height: 30px;
+        width: 300px;
+        margin-bottom: 5px;
+    }
+    
+    h2{
+        color:rgb(83, 78, 60);
+        text-align: center;
+    }
+    .btn{
+        color:rgb(231, 227, 227);
+        border: 2px solid rgb(139, 136, 136);
+        margin-top: 15px;
+        width: 300px;
+        height: 45px;
+        text-align: center;
+        line-height: 20px;
+        cursor: pointer;
+        background: rgb(171, 164, 144);
+        border-radius: 17px;
+    
+    }
+    .btn:hover{
+        background: rgb(201, 200, 195);
+        color: #fff;
+        border: 2px solid rgb(124, 122, 122);
+    }
+    .logo img{
+        height: 200px;
+        width: 200px;
+    }
+    nav{
+        height: 75px;
+    }
+    .container-fluid{
+        height:75px;
+        background-color: rgb(231, 227, 227);
+    }
+    hr{
+        margin-top: auto;
+        height: 4px;
+        color:rgb(115, 112, 112)
+    }
+    body{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+    .logo img{
+        height: 75px;
+        width: 75px;
+    }
+    

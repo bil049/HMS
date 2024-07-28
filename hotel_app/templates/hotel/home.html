@@ -1,0 +1,56 @@
+{% extends 'hotel/base1.html' %}
+{%block content%}
+<style>
+.container{
+    width: auto;
+    height: 750px;
+}
+.row{
+    height: 250px;
+}
+.col{
+    width:75px;
+    height: 230px;
+    background: rgba(231, 227, 227, 0.882);
+    border: 2px solid rgb(231, 227, 227);
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.col:hover{
+    background: rgba(231, 227, 227, 0.95);
+	color: #fff;
+    border: 2px solid rgb(124, 122, 122);
+    transform: translateY(10px);
+    transition: transform 0.5s;
+}
+h2{
+    color: black;
+    margin-top: 95px;
+    margin-left: 30px;
+}
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+</style>
+<title>Reservations</title>
+ <div class="container">
+    <a href="../makereservation" style="text-decoration: none"><div class="row">
+        <div class="col">
+            <h2>Make A Reservation</h2>
+        </div>
+    </div> </a>
+     <a href="{% url 'upUI1'%}" style="text-decoration: none"><div class="row">
+       <div class="col">
+            <h2>View/Update Reservation</h2>
+        </div>
+    </div></a>
+    <a href="{% url 'caUI1'%}" style="text-decoration: none"><div class="row">
+        <div class="col">
+            <h2>Cancel Reservation</h2>
+        </div>
+    </div></a>
+ </div>
+{% endblock %}

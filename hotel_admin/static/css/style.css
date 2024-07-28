@@ -1,0 +1,28 @@
+.logo img{
+    width:200px;
+    height:200px;
+}
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.btn{
+	color:black;
+    border: 2px solid rgb(124, 122, 122);
+	margin-top: 5px;
+	margin-left: 45px 0;
+	width: 200px;
+	height: 50px;
+	text-align: center;
+	line-height: 20px;
+	cursor: pointer;
+    background: rgb(228, 229, 225);
+    border-radius: 25px;
+}
+.btn:hover{
+	background: rgb(201, 200, 195);
+	color: #fff;
+    border: 2px solid rgb(124, 122, 122);
+}

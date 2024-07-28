@@ -1,0 +1,53 @@
+{% extends 'hotel/base1.html'%}
+{% block content%}
+<style>
+    body{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+    h1{
+        color: rgb(215, 210, 210);
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Reservations</h1>
+        </div>
+    </div>
+
+    <!-- Reservation Table -->
+    <div class="row">
+        <div class="col-md-12"><table class="table" style="background-color: rgba(237, 238, 234, 0.8)">                    
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Room Type</th>
+                        <th>Room Number</th>
+                        <th>Check-In</th>
+                        <th>Check-Out</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for Reservation in Reservations%}
+                    <tr>
+                        <td>{{Reservation.name}}</td>
+                        <td>{{Reservation.room_type}}</td>
+                        <td>{{Reservation.room_number}}</td>
+                        <td>{{Reservation.check_in}}</td>
+                        <td>{{Reservation.check_out}}</td>
+                        
+
+                    </tr>
+                    {%endfor%}
+
+                </tbody>
+            </table>
+            
+                    
+        </div>
+    </div>
+</div>
+{% endblock %}

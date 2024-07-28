@@ -1,0 +1,14 @@
+{% extends 'hoteladmin/base3.html' %}
+{% block content %}
+<title>Chat</title>
+<div class="container">
+    <form  action="" method="POST">
+        <h2>Chat With Us</h2>
+
+        {% csrf_token %}
+        {{form.as_p}}
+
+        <input  type="submit" value ="Send" class="btn btn-success"> 
+    </form>
+</div>
+{%endblock%}

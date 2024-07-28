@@ -1,0 +1,49 @@
+{% extends 'hotel/base1.html'%}
+{% block content%}
+<style>
+    body{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+    h1{
+        color: rgb(215, 210, 210);
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Services</h1>
+        </div>
+    </div>
+
+   
+    <div class="row">
+        <div class="col-md-12"><table class="table" style="background-color: rgba(237, 238, 234, 0.8)">                    
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for Service in Services%}
+                    <tr>
+                        <td>{{Service.service}}</td>
+                        <td>{{Service.date}}</td>
+                        <td>{{Service.time}}</td>
+                        
+                    </tr>
+                    {%endfor%}
+
+                </tbody>
+            </table>
+            
+                    
+        </div>
+    </div>
+</div>
+{% endblock %}
